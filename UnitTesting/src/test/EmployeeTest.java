@@ -37,28 +37,40 @@ public class EmployeeTest {
 	}
 
 	@Test
-	public void testCs() {
+	public void testCsWorker() {
 		Employee e=new Employee(386,"USD",15,EmployeeType.Worker); //Caso de prueba para calcular salario de un worker
-		assertEquals(450,e.cs(),0.001);
+		assertEquals(450.333,e.cs(),0.001);
 	}
 	
 	@Test
-	public void testCs2() {
+	public void testCsSupervisor() {
 		Employee e=new Employee(386,"USD",15,EmployeeType.Supervisor);//Caso de prueba para calcular salario de un supervisor
-		assertEquals(451,e.cs(),0.001);
+		assertEquals(455.583,e.cs(),0.001);
 	}
 	
 	@Test
-	public void testCs3() {
+	public void testCsManager() {
 		Employee e=new Employee(386,"USD",15,EmployeeType.Manager);//Caso de prueba para calcular salario de un manager
-		assertEquals(451,e.cs(),0.001);
+		assertEquals(460.833,e.cs(),0.001);
 	}
 	
 	@Test
-	public void testCs4() {
-		Employee e=new Employee(386,"EUR",15,EmployeeType.Manager);//Caso de prueba para calcular salario de un worker que su moneda es euro
-		assertEquals(451,e.cs(),0.001);
+	public void testCsWorkerEuro() {
+		Employee e=new Employee(386,"EUR",15,EmployeeType.Worker);//Caso de prueba para calcular salario de un worker que su moneda es euro
+		assertEquals(431.033,e.cs(),0.001);
 	}
+	
+	@Test
+	public void testCsSupervisorLibra() {
+		Employee e=new Employee(386,"Euro",15,EmployeeType.Supervisor);//Caso de prueba para calcular salario de un supervisor que su moneda es libra
+		assertEquals(436.283,e.cs(),0.001);
+	}
+	@Test
+	public void testCsManagerSoles() {
+		Employee e=new Employee(386,"Euro",15,EmployeeType.Manager);//Caso de prueba para calcular salario de un manager que su moneda es soles
+		assertEquals(441.533,e.cs(),0.001);
+	}
+	
 
 	@Test
 	public void testCalculateYearBonus() {
