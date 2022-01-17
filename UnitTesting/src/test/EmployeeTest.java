@@ -31,13 +31,14 @@ public class EmployeeTest {
 
 	@Test
 	public void testEmployee() {
-		Employee e=new Employee(300,"dollar",15,EmployeeType.Worker);
+		Employee e=new Employee(300,"USD",15,EmployeeType.Worker);
 		assertNotNull(e);
 	}
 
 	@Test
 	public void testCs() {
-		fail("Not yet implemented");
+		Employee e=new Employee(300,"USD",15,EmployeeType.Worker);
+		e.cs()
 	}
 
 	@Test
