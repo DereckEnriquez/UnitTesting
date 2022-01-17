@@ -31,14 +31,15 @@ public class EmployeeTest {
 
 	@Test
 	public void testEmployee() {
-		Employee e=new Employee(300,"USD",15,EmployeeType.Worker);
+		Employee e=new Employee(386,"USD",15,EmployeeType.Worker);
 		assertNotNull(e);
 	}
 
 	@Test
 	public void testCs() {
-		Employee e=new Employee(300,"USD",15,EmployeeType.Worker);
-		e.cs()
+		Employee e=new Employee(386,"USD",15,EmployeeType.Worker);
+		e.cs();
+		
 	}
 
 	@Test
