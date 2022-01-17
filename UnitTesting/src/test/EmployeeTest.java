@@ -30,6 +30,7 @@ public class EmployeeTest {
 	}
 
 	@Test
+	//Prueba no necesaria para constructores 
 	public void testEmployee() {
 		Employee e=new Employee(386,"USD",15,EmployeeType.Worker);
 		assertNotNull(e);
@@ -37,9 +38,26 @@ public class EmployeeTest {
 
 	@Test
 	public void testCs() {
-		Employee e=new Employee(386,"USD",15,EmployeeType.Worker);
+		Employee e=new Employee(386,"USD",15,EmployeeType.Worker); //Caso de prueba para calcular salario de un worker
+		assertEquals(450,e.cs(),0.001);
+	}
+	
+	@Test
+	public void testCs2() {
+		Employee e=new Employee(386,"USD",15,EmployeeType.Supervisor);//Caso de prueba para calcular salario de un supervisor
 		assertEquals(451,e.cs(),0.001);
-		
+	}
+	
+	@Test
+	public void testCs3() {
+		Employee e=new Employee(386,"USD",15,EmployeeType.Manager);//Caso de prueba para calcular salario de un manager
+		assertEquals(451,e.cs(),0.001);
+	}
+	
+	@Test
+	public void testCs4() {
+		Employee e=new Employee(386,"Euro",15,EmployeeType.Manager);//Caso de prueba para calcular salario de un worker que su moneda es euro
+		assertEquals(451,e.cs(),0.001);
 	}
 
 	@Test
