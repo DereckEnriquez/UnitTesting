@@ -56,13 +56,45 @@ public class EmployeeTest {
 	
 	@Test
 	public void testCs4() {
-		Employee e=new Employee(386,"Euro",15,EmployeeType.Manager);//Caso de prueba para calcular salario de un worker que su moneda es euro
+		Employee e=new Employee(386,"EUR",15,EmployeeType.Manager);//Caso de prueba para calcular salario de un worker que su moneda es euro
 		assertEquals(451,e.cs(),0.001);
 	}
 
 	@Test
 	public void testCalculateYearBonus() {
-		fail("Not yet implemented");
+		Employee e = new Employee(386,"USD",15,EmployeeType.Worker);
+		assertEquals(386.0,e.CalculateYearBonus(),0.001);
 	}
+
+	@Test
+	public void testCalculateYearBonus() {
+		Employee e = new Employee(386,"USD",15,EmployeeType.Supervisor);
+		assertEquals(579.0,e.CalculateYearBonus(),0.001);
+	}
+	
+	@Test
+	public void testCalculateYearBonus() {
+		Employee e = new Employee(386,"USD",15,EmployeeType.Manager);
+		assertEquals(772.0,e.CalculateYearBonus(),0.001);
+	}
+	
+	@Test
+	public void testCalculateYearBonus() {
+		Employee e = new Employee(386,"EUR",15,EmployeeType.Worker);
+		assertEquals(386.0,e.CalculateYearBonus(),0.001);
+	}
+
+	@Test
+	public void testCalculateYearBonus() {
+		Employee e = new Employee(386,"EUR",15,EmployeeType.Supervisor);
+		assertEquals(559.7,e.CalculateYearBonus(),0.001);
+	}
+	
+	@Test
+	public void testCalculateYearBonus() {
+		Employee e = new Employee(386,"EUR",15,EmployeeType.Manager);
+		assertEquals(752.7,e.CalculateYearBonus(),0.001);
+	}
+	
 
 }
