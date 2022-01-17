@@ -38,7 +38,7 @@ public class EmployeeTest {
 	@Test
 	public void testCs() {
 		Employee e=new Employee(386,"USD",15,EmployeeType.Worker);
-		e.cs();
+		assertEquals(451,e.cs(),0.001);
 		
 	}
 
